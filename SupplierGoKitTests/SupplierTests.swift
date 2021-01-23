@@ -8,7 +8,7 @@
 import XCTest
 @testable import SupplierGoKit
 
-class SupplierGoKitTests: XCTestCase {
+class SupplierTests: XCTestCase {
     var bundle: Bundle!
     var dateFormatter: DateFormatter!
     var jsonDecoder: JSONDecoder!

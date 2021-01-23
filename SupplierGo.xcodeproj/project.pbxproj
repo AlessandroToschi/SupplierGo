@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D2AA0A4E25BC311C00E2954B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA0A4D25BC311C00E2954B /* AppDelegate.swift */; };
 		D2AA0A5025BC311C00E2954B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA0A4F25BC311C00E2954B /* SceneDelegate.swift */; };
-		D2AA0A5225BC311C00E2954B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA0A5125BC311C00E2954B /* ViewController.swift */; };
 		D2AA0A5525BC311C00E2954B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AA0A5325BC311C00E2954B /* Main.storyboard */; };
 		D2AA0A5725BC311F00E2954B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2AA0A5625BC311F00E2954B /* Assets.xcassets */; };
 		D2AA0A5A25BC311F00E2954B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AA0A5825BC311F00E2954B /* LaunchScreen.storyboard */; };
@@ -27,6 +26,9 @@
 		D2AA0AA925BC45E100E2954B /* array.json in Resources */ = {isa = PBXBuildFile; fileRef = D2AA0AA825BC45E100E2954B /* array.json */; };
 		D2AA0AAD25BC487300E2954B /* DataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA0AAC25BC487300E2954B /* DataLoaderTests.swift */; };
 		D2E9A42625BC5D14006798AB /* SupplierLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9A42525BC5D14006798AB /* SupplierLoader.swift */; };
+		D2E9A42D25BC6361006798AB /* SuppliersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9A42C25BC6361006798AB /* SuppliersTableViewController.swift */; };
+		D2E9A43325BC6426006798AB /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9A43225BC6426006798AB /* Endpoint.swift */; };
+		D2E9A43A25BC682F006798AB /* SupplierTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9A43925BC682F006798AB /* SupplierTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +73,6 @@
 		D2AA0A4A25BC311C00E2954B /* SupplierGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupplierGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AA0A4D25BC311C00E2954B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2AA0A4F25BC311C00E2954B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D2AA0A5125BC311C00E2954B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D2AA0A5425BC311C00E2954B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2AA0A5625BC311F00E2954B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2AA0A5925BC311F00E2954B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,6 +92,9 @@
 		D2AA0AA825BC45E100E2954B /* array.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = array.json; sourceTree = "<group>"; };
 		D2AA0AAC25BC487300E2954B /* DataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoaderTests.swift; sourceTree = "<group>"; };
 		D2E9A42525BC5D14006798AB /* SupplierLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierLoader.swift; sourceTree = "<group>"; };
+		D2E9A42C25BC6361006798AB /* SuppliersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersTableViewController.swift; sourceTree = "<group>"; };
+		D2E9A43225BC6426006798AB /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		D2E9A43925BC682F006798AB /* SupplierTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		D2AA0A4C25BC311C00E2954B /* SupplierGo */ = {
 			isa = PBXGroup;
 			children = (
+				D2E9A43825BC680B006798AB /* Views */,
 				D2E9A42925BC60DA006798AB /* Controllers */,
 				D2AA0A4D25BC311C00E2954B /* AppDelegate.swift */,
 				D2AA0A4F25BC311C00E2954B /* SceneDelegate.swift */,
@@ -150,6 +155,7 @@
 				D2AA0A5625BC311F00E2954B /* Assets.xcassets */,
 				D2AA0A5825BC311F00E2954B /* LaunchScreen.storyboard */,
 				D2AA0A5B25BC311F00E2954B /* Info.plist */,
+				D2E9A43225BC6426006798AB /* Endpoint.swift */,
 			);
 			path = SupplierGo;
 			sourceTree = "<group>";
@@ -192,9 +198,17 @@
 		D2E9A42925BC60DA006798AB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D2AA0A5125BC311C00E2954B /* ViewController.swift */,
+				D2E9A42C25BC6361006798AB /* SuppliersTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D2E9A43825BC680B006798AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2E9A43925BC682F006798AB /* SupplierTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,9 +359,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2AA0A5225BC311C00E2954B /* ViewController.swift in Sources */,
 				D2AA0A4E25BC311C00E2954B /* AppDelegate.swift in Sources */,
 				D2AA0A5025BC311C00E2954B /* SceneDelegate.swift in Sources */,
+				D2E9A42D25BC6361006798AB /* SuppliersTableViewController.swift in Sources */,
+				D2E9A43325BC6426006798AB /* Endpoint.swift in Sources */,
+				D2E9A43A25BC682F006798AB /* SupplierTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +595,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SupplierGoKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -587,9 +604,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aleto.SupplierGoKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -607,6 +625,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SupplierGoKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -615,8 +634,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aleto.SupplierGoKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

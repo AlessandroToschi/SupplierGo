@@ -13,7 +13,7 @@ public enum SupplierError: Error{
     case invalidData
 }
 
-class SupplierLoader{
+public class SupplierLoader{
     public let endpoint: URL
     public private(set) var suppliers: [Supplier]
     private let jsonDecoder: JSONDecoder

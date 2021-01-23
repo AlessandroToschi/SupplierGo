@@ -11,6 +11,7 @@ public enum SupplierError: Error{
     case dataError(DataLoaderError)
     case noData
     case invalidData
+    case invalidAvatarURL
 }
 
 public class SupplierLoader{
@@ -47,6 +48,28 @@ public class SupplierLoader{
             
             self.suppliers = retrievedSupplier
             completionHandler(nil)
+        }
+    }
+    
+    public func loadAvatars(completionHandler: @escaping (_ error: SupplierError?) -> Void){
+        for (index, supplier) in self.suppliers.enumerated(){
+            guard let avatarURL = URL(string: supplier.avatar.endpoint) else{
+                completionHandler(.invalidAvatarURL)
+                continue
+            }
+            DataLoader.load(fromURL: avatarURL) { (data, error) in
+                if let error = error{
+                    completionHandler(.dataError(error))
+                    return
+                }
+                guard let data = data else{
+                    completionHandler(.noData)
+                    return
+                }
+                
+                self.suppliers[index].avatar.data = data
+                completionHandler(nil)
+            }
         }
     }
 }

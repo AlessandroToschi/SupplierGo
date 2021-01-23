@@ -11,7 +11,7 @@ public struct Supplier: Decodable{
     public let id: Int
     public let creationDate: Date
     public let fullname: String
-    public let avatar: SupplierAvatar
+    public var avatar: SupplierAvatar
     public let phone: String
     public let company: String
     public let email: String

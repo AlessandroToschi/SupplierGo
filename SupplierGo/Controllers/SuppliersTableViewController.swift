@@ -17,13 +17,36 @@ class SuppliersTableViewController: UITableViewController {
         
         self.supplierLoader = SupplierLoader(endpoint: Endpoint.addressBookList())
         self.supplierLoader.load(completionHandler: handleSuppliers)
+        //self.supplierLoader.loadAvatars(completionHandler: handleSuppliers)
     }
     
     func handleSuppliers(error: SupplierError?){
         if let error = error{
             var errorMessage = ""
             switch error {
-            case .noData, .invalidData:
+            case .noData, .invalidData, .invalidAvatarURL:
+                errorMessage = "Unexpected error happened while downloading the suppliers!"
+            case .dataError(_):
+                errorMessage = "A network problem occurred while downloading the suppliers!"
+            }
+            errorMessage += "\nPlease try again."
+            DispatchQueue.main.async {
+                self.displayErrorMessage(erroreMessage: errorMessage)
+            }
+            return
+        }
+        
+        DispatchQueue.main.async{
+            self.tableView.reloadData()
+            self.supplierLoader.loadAvatars(completionHandler: self.handleAvatar)
+        }
+    }
+    
+    func handleAvatar(error: SupplierError?){
+        if let error = error{
+            var errorMessage = ""
+            switch error {
+            case .noData, .invalidData, .invalidAvatarURL:
                 errorMessage = "Unexpected error happened while downloading the suppliers!"
             case .dataError(_):
                 errorMessage = "A network problem occurred while downloading the suppliers!"
@@ -39,7 +62,9 @@ class SuppliersTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
-
+    
+    
+    
     func displayErrorMessage(erroreMessage: String){
         let alertController = UIAlertController(title: "Error!", message: erroreMessage, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -63,11 +88,12 @@ class SuppliersTableViewController: UITableViewController {
         }
         let supplier = self.supplierLoader.suppliers[indexPath.row]
         if let avatarData = supplier.avatar.data, let avatarImage = UIImage(data: avatarData){
-            cell.imageView?.image = avatarImage
+            cell.avatarImageView?.image = avatarImage
+            cell.avatarImageView?.layer.cornerRadius = 15.0
         }
         cell.fullnameLabel?.text = supplier.fullname
         cell.companyLabel?.text = supplier.company
-
+        
         return cell
     }
     

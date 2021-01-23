@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "createdAt": "2021-01-21T09:11:16.040Z",
+        "fullname": "Matteo Hamill",
+        "avatar": "https://gaiago-static-files-prod.s3-eu-west-1.amazonaws.com/statics/mockAvatar/avatar.png",
+        "phone": "1-789-686-0305",
+        "company": "Murphy, Kerluke and Swift",
+        "email": "Laurianne.Bashirian68@yahoo.com"
+    },
+    {
+        "id": "2",
+        "createdAt": "2021-01-20T18:49:51.479Z",
+        "fullname": "Kallie Gusikowski",
+        "avatar": "https://gaiago-static-files-prod.s3-eu-west-1.amazonaws.com/statics/mockAvatar/avatar-1.png",
+        "phone": "273.797.1657 x073",
+        "company": "Dicki, Schulist and Hauck",
+        "email": "May.Schneider@gmail.com"
+    }
+]

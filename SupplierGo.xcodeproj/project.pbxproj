@@ -13,7 +13,50 @@
 		D2AA0A5525BC311C00E2954B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AA0A5325BC311C00E2954B /* Main.storyboard */; };
 		D2AA0A5725BC311F00E2954B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2AA0A5625BC311F00E2954B /* Assets.xcassets */; };
 		D2AA0A5A25BC311F00E2954B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AA0A5825BC311F00E2954B /* LaunchScreen.storyboard */; };
+		D2AA0A7025BC314E00E2954B /* SupplierGoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AA0A6725BC314E00E2954B /* SupplierGoKit.framework */; };
+		D2AA0A7725BC314E00E2954B /* SupplierGoKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA0A7625BC314E00E2954B /* SupplierGoKitTests.swift */; };
+		D2AA0A7925BC314E00E2954B /* SupplierGoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D2AA0A6925BC314E00E2954B /* SupplierGoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2AA0A7C25BC314E00E2954B /* SupplierGoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AA0A6725BC314E00E2954B /* SupplierGoKit.framework */; };
+		D2AA0A7D25BC314E00E2954B /* SupplierGoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D2AA0A6725BC314E00E2954B /* SupplierGoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2AA0A7125BC314E00E2954B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2AA0A4225BC311C00E2954B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AA0A6625BC314E00E2954B;
+			remoteInfo = SupplierGoKit;
+		};
+		D2AA0A7325BC314E00E2954B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2AA0A4225BC311C00E2954B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AA0A4925BC311C00E2954B;
+			remoteInfo = SupplierGo;
+		};
+		D2AA0A7A25BC314E00E2954B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2AA0A4225BC311C00E2954B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AA0A6625BC314E00E2954B;
+			remoteInfo = SupplierGoKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D2AA0A8125BC314E00E2954B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D2AA0A7D25BC314E00E2954B /* SupplierGoKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D2AA0A4A25BC311C00E2954B /* SupplierGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupplierGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +67,12 @@
 		D2AA0A5625BC311F00E2954B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2AA0A5925BC311F00E2954B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2AA0A5B25BC311F00E2954B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2AA0A6725BC314E00E2954B /* SupplierGoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SupplierGoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AA0A6925BC314E00E2954B /* SupplierGoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupplierGoKit.h; sourceTree = "<group>"; };
+		D2AA0A6A25BC314E00E2954B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2AA0A6F25BC314E00E2954B /* SupplierGoKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SupplierGoKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AA0A7625BC314E00E2954B /* SupplierGoKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierGoKitTests.swift; sourceTree = "<group>"; };
+		D2AA0A7825BC314E00E2954B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +80,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2AA0A7C25BC314E00E2954B /* SupplierGoKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AA0A6425BC314E00E2954B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AA0A6C25BC314E00E2954B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2AA0A7025BC314E00E2954B /* SupplierGoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				D2AA0A4C25BC311C00E2954B /* SupplierGo */,
+				D2AA0A6825BC314E00E2954B /* SupplierGoKit */,
+				D2AA0A7525BC314E00E2954B /* SupplierGoKitTests */,
 				D2AA0A4B25BC311C00E2954B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				D2AA0A4A25BC311C00E2954B /* SupplierGo.app */,
+				D2AA0A6725BC314E00E2954B /* SupplierGoKit.framework */,
+				D2AA0A6F25BC314E00E2954B /* SupplierGoKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,7 +136,36 @@
 			path = SupplierGo;
 			sourceTree = "<group>";
 		};
+		D2AA0A6825BC314E00E2954B /* SupplierGoKit */ = {
+			isa = PBXGroup;
+			children = (
+				D2AA0A6925BC314E00E2954B /* SupplierGoKit.h */,
+				D2AA0A6A25BC314E00E2954B /* Info.plist */,
+			);
+			path = SupplierGoKit;
+			sourceTree = "<group>";
+		};
+		D2AA0A7525BC314E00E2954B /* SupplierGoKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2AA0A7625BC314E00E2954B /* SupplierGoKitTests.swift */,
+				D2AA0A7825BC314E00E2954B /* Info.plist */,
+			);
+			path = SupplierGoKitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AA0A6225BC314E00E2954B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2AA0A7925BC314E00E2954B /* SupplierGoKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		D2AA0A4925BC311C00E2954B /* SupplierGo */ = {
@@ -77,15 +175,54 @@
 				D2AA0A4625BC311C00E2954B /* Sources */,
 				D2AA0A4725BC311C00E2954B /* Frameworks */,
 				D2AA0A4825BC311C00E2954B /* Resources */,
+				D2AA0A8125BC314E00E2954B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D2AA0A7B25BC314E00E2954B /* PBXTargetDependency */,
 			);
 			name = SupplierGo;
 			productName = SupplierGo;
 			productReference = D2AA0A4A25BC311C00E2954B /* SupplierGo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D2AA0A6625BC314E00E2954B /* SupplierGoKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2AA0A7E25BC314E00E2954B /* Build configuration list for PBXNativeTarget "SupplierGoKit" */;
+			buildPhases = (
+				D2AA0A6225BC314E00E2954B /* Headers */,
+				D2AA0A6325BC314E00E2954B /* Sources */,
+				D2AA0A6425BC314E00E2954B /* Frameworks */,
+				D2AA0A6525BC314E00E2954B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SupplierGoKit;
+			productName = SupplierGoKit;
+			productReference = D2AA0A6725BC314E00E2954B /* SupplierGoKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D2AA0A6E25BC314E00E2954B /* SupplierGoKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2AA0A8225BC314E00E2954B /* Build configuration list for PBXNativeTarget "SupplierGoKitTests" */;
+			buildPhases = (
+				D2AA0A6B25BC314E00E2954B /* Sources */,
+				D2AA0A6C25BC314E00E2954B /* Frameworks */,
+				D2AA0A6D25BC314E00E2954B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2AA0A7225BC314E00E2954B /* PBXTargetDependency */,
+				D2AA0A7425BC314E00E2954B /* PBXTargetDependency */,
+			);
+			name = SupplierGoKitTests;
+			productName = SupplierGoKitTests;
+			productReference = D2AA0A6F25BC314E00E2954B /* SupplierGoKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +235,13 @@
 				TargetAttributes = {
 					D2AA0A4925BC311C00E2954B = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					D2AA0A6625BC314E00E2954B = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					D2AA0A6E25BC314E00E2954B = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = D2AA0A4925BC311C00E2954B;
 					};
 				};
 			};
@@ -115,6 +259,8 @@
 			projectRoot = "";
 			targets = (
 				D2AA0A4925BC311C00E2954B /* SupplierGo */,
+				D2AA0A6625BC314E00E2954B /* SupplierGoKit */,
+				D2AA0A6E25BC314E00E2954B /* SupplierGoKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +273,20 @@
 				D2AA0A5A25BC311F00E2954B /* LaunchScreen.storyboard in Resources */,
 				D2AA0A5725BC311F00E2954B /* Assets.xcassets in Resources */,
 				D2AA0A5525BC311C00E2954B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AA0A6525BC314E00E2954B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AA0A6D25BC314E00E2954B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +303,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D2AA0A6325BC314E00E2954B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AA0A6B25BC314E00E2954B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2AA0A7725BC314E00E2954B /* SupplierGoKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2AA0A7225BC314E00E2954B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AA0A6625BC314E00E2954B /* SupplierGoKit */;
+			targetProxy = D2AA0A7125BC314E00E2954B /* PBXContainerItemProxy */;
+		};
+		D2AA0A7425BC314E00E2954B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AA0A4925BC311C00E2954B /* SupplierGo */;
+			targetProxy = D2AA0A7325BC314E00E2954B /* PBXContainerItemProxy */;
+		};
+		D2AA0A7B25BC314E00E2954B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AA0A6625BC314E00E2954B /* SupplierGoKit */;
+			targetProxy = D2AA0A7A25BC314E00E2954B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D2AA0A5325BC311C00E2954B /* Main.storyboard */ = {
@@ -288,6 +481,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SupplierGo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,7 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aleto.SupplierGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -306,6 +500,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SupplierGo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +508,97 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aleto.SupplierGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D2AA0A7F25BC314E00E2954B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SupplierGoKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aleto.SupplierGoKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D2AA0A8025BC314E00E2954B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SupplierGoKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aleto.SupplierGoKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D2AA0A8325BC314E00E2954B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SupplierGoKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aleto.SupplierGoKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SupplierGo.app/SupplierGo";
+			};
+			name = Debug;
+		};
+		D2AA0A8425BC314E00E2954B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SupplierGoKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aleto.SupplierGoKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SupplierGo.app/SupplierGo";
 			};
 			name = Release;
 		};
@@ -334,6 +619,24 @@
 			buildConfigurations = (
 				D2AA0A5F25BC311F00E2954B /* Debug */,
 				D2AA0A6025BC311F00E2954B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2AA0A7E25BC314E00E2954B /* Build configuration list for PBXNativeTarget "SupplierGoKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2AA0A7F25BC314E00E2954B /* Debug */,
+				D2AA0A8025BC314E00E2954B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2AA0A8225BC314E00E2954B /* Build configuration list for PBXNativeTarget "SupplierGoKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2AA0A8325BC314E00E2954B /* Debug */,
+				D2AA0A8425BC314E00E2954B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

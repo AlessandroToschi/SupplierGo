@@ -12,17 +12,21 @@ import SupplierGoKit
 class SuppliersTableViewController: UITableViewController {
     var supplierLoader: SupplierLoader!
     var selectedSupplier: Supplier?
+    var dateFormatter: DateFormatter!
+    var lastUpdate: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.supplierLoader = SupplierLoader(endpoint: Endpoint.addressBookList())
         self.supplierLoader.load(completionHandler: handleSuppliers)
-        //self.supplierLoader.loadAvatars(completionHandler: handleSuppliers)
         
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
         self.tableView.refreshControl = refreshControl
+        
+        self.dateFormatter = DateFormatter()
+        self.dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
     }
     
     @objc func pullToRefresh(_ refreshControl: UIRefreshControl){
@@ -54,6 +58,7 @@ class SuppliersTableViewController: UITableViewController {
             }
             self.tableView.reloadData()
             self.supplierLoader.loadAvatars(completionHandler: self.handleAvatar)
+            self.lastUpdate = Date()
         }
     }
     
@@ -126,6 +131,16 @@ class SuppliersTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: false)
     }
+    
+    /*
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        print(section)
+        if let lastUpdate = self.lastUpdate{
+            return self.dateFormatter.string(from: lastUpdate)
+        }
+        return nil
+    }
+    */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {

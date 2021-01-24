@@ -19,6 +19,14 @@ class SuppliersTableViewController: UITableViewController {
         self.supplierLoader = SupplierLoader(endpoint: Endpoint.addressBookList())
         self.supplierLoader.load(completionHandler: handleSuppliers)
         //self.supplierLoader.loadAvatars(completionHandler: handleSuppliers)
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
+        self.tableView.refreshControl = refreshControl
+    }
+    
+    @objc func pullToRefresh(_ refreshControl: UIRefreshControl){
+        self.supplierLoader.load(completionHandler: handleSuppliers)
     }
     
     func handleSuppliers(error: SupplierError?){
@@ -38,6 +46,12 @@ class SuppliersTableViewController: UITableViewController {
         }
         
         DispatchQueue.main.async{
+            if let refreshControl = self.tableView.refreshControl{
+                if refreshControl.isRefreshing{
+                    refreshControl.endRefreshing()
+                    print("spengo")
+                }
+            }
             self.tableView.reloadData()
             self.supplierLoader.loadAvatars(completionHandler: self.handleAvatar)
         }
@@ -63,8 +77,6 @@ class SuppliersTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
-    
-    
     
     func displayErrorMessage(erroreMessage: String){
         let alertController = UIAlertController(title: "Error!", message: erroreMessage, preferredStyle: .alert)
@@ -109,6 +121,10 @@ class SuppliersTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         self.selectedSupplier = self.supplierLoader.suppliers[indexPath.row]
         return indexPath
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: false)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

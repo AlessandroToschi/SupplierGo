@@ -93,6 +93,8 @@
 		D2AA0AA825BC45E100E2954B /* array.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = array.json; sourceTree = "<group>"; };
 		D2AA0AAC25BC487300E2954B /* DataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoaderTests.swift; sourceTree = "<group>"; };
 		D2AAB35C25BD97D3007D0DA9 /* SupplierdDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierdDetailViewController.swift; sourceTree = "<group>"; };
+		D2AAB36A25BF3D8E007D0DA9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D2AAB36E25BF43B7007D0DA9 /* SupplierGoLive.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SupplierGoLive.mp4; sourceTree = "<group>"; };
 		D2E9A42525BC5D14006798AB /* SupplierLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierLoader.swift; sourceTree = "<group>"; };
 		D2E9A42C25BC6361006798AB /* SuppliersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersTableViewController.swift; sourceTree = "<group>"; };
 		D2E9A43225BC6426006798AB /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -129,6 +131,8 @@
 		D2AA0A4125BC311C00E2954B = {
 			isa = PBXGroup;
 			children = (
+				D2AAB36D25BF43A0007D0DA9 /* Live */,
+				D2AAB36A25BF3D8E007D0DA9 /* README.md */,
 				D2AA0A4C25BC311C00E2954B /* SupplierGo */,
 				D2AA0A6825BC314E00E2954B /* SupplierGoKit */,
 				D2AA0A7525BC314E00E2954B /* SupplierGoKitTests */,
@@ -219,6 +223,14 @@
 				D2E9A43225BC6426006798AB /* Endpoint.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		D2AAB36D25BF43A0007D0DA9 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAB36E25BF43B7007D0DA9 /* SupplierGoLive.mp4 */,
+			);
+			path = Live;
 			sourceTree = "<group>";
 		};
 		D2E9A42925BC60DA006798AB /* Controllers */ = {

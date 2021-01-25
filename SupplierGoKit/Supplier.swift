@@ -18,7 +18,12 @@ public struct Supplier: Decodable{
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: SupplierCodingKeys.self)
-        self.id = Int(try container.decode(String.self, forKey: .id))!
+        if let supplierId = Int(try container.decode(String.self, forKey: .id)){
+            self.id = supplierId
+        }
+        else{
+            self.id = -1
+        }
         self.creationDate = try container.decode(Date.self, forKey: .creationDate)
         self.fullname = try container.decode(String.self, forKey: .fullname)
         self.avatar = SupplierAvatar(endpoint: try container.decode(String.self, forKey: .avatar), data: nil)

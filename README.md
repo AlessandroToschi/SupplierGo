@@ -7,7 +7,7 @@
 
 ### SupplierGo
 The SupplierGo App is composed of two main views: the SupplierTableViewController and the SupplierDetailViewControler.
-The first is the entry point of the App, downloads the suppliers from the endpoint and presents the most important information in a UITableView: name, company and avatar. 
+The first is the entry point of the App, downloads the suppliers from the endpoint and presents the most important information in a UITableView: name, company and avatar. This view implements the "pull to refresh" pattern, to download the suppliers again.
 
 The download of the avatars has been decoupled from the download of the suppliers.
 This choice is motivated by the fact that the avatar is just a part of the supplier, so it can be loaded and rendered in a second time.

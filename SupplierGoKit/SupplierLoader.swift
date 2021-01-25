@@ -7,10 +7,16 @@
 
 import Foundation
 
+
+/// The errors that can occur when downloading the suppliers.
 public enum SupplierError: Error{
+    /// A generic error from the underlying level.
     case dataError(DataLoaderError)
+    /// The data returned is empty.
     case noData
+    /// The data is not representable as list of suppliers.
     case invalidData
+    /// The avatar's URL is invalid.
     case invalidAvatarURL
 }
 
@@ -30,6 +36,9 @@ public class SupplierLoader{
         self.jsonDecoder.dateDecodingStrategy = .formatted(formatter)
     }
     
+    
+    /// Download the suppliers from the endpoint set during the instantiation.
+    /// - Parameter completionHandler: Returns the error if occurred during the download and notifies for the end of the download.
     public func load(completionHandler: @escaping (_ error: SupplierError?) -> Void){
         DataLoader.load(fromURL: self.endpoint) {(data, error) in
             if let error = error{
@@ -51,13 +60,15 @@ public class SupplierLoader{
         }
     }
     
+    /// Download the supplier's avatars, if suppliers are already loaded.
+    /// - Parameter completionHandler: Returns the error if occurred during the download and notifies for the end of the download.
     public func loadAvatars(completionHandler: @escaping (_ error: SupplierError?) -> Void){
         for (index, supplier) in self.suppliers.enumerated(){
             guard let avatarURL = URL(string: supplier.avatar.endpoint) else{
                 completionHandler(.invalidAvatarURL)
                 continue
             }
-            DataLoader.load(fromURL: avatarURL) { (data, error) in
+            DataLoader.load(fromURL: avatarURL) {(data, error) in
                 if let error = error{
                     completionHandler(.dataError(error))
                     return
